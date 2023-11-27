@@ -2,8 +2,6 @@ const express = require("express");
 
 const app = express();
 
-const port = 5000;
-
 const movies = [
   {
     id: 1,
@@ -52,10 +50,4 @@ app.get("/", (req, res) => {
   res.send("Welcome to my favourite movie list");
 });
 
-app.listen(port, (err) => {
-  if (err) {
-    console.error("Something bad happened");
-  } else {
-    console.log(`Server is listening on ${port}`);
-  }
-});
+module.exports = app;
